@@ -1,0 +1,18 @@
+# Ignorar arquivos temporários e de configuração do sistema
+*.log
+*.tmp
+*.swp
+*.swo
+*.DS_Store
+*.env
+
+# Ignorar pastas de backup ou build
+backup/
+build/
+dist/
+node_modules/
+
+# Ignorar arquivos específicos de IDE
+.vscode/
+.idea/
+*.iml
