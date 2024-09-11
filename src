@@ -1,0 +1,21 @@
+CREATE TABLE Categorias (
+    CategoriaID INT AUTO_INCREMENT PRIMARY KEY,
+    Nome VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE Fornecedores (
+    FornecedorID INT AUTO_INCREMENT PRIMARY KEY,
+    Nome VARCHAR(100) NOT NULL,
+    Contato VARCHAR(100),
+    Endereco TEXT
+);
+
+CREATE TABLE Produtos (
+    ProdutoID INT AUTO_INCREMENT PRIMARY KEY,
+    Nome VARCHAR(100) NOT NULL,
+    Descricao TEXT,
+    Preco DECIMAL(10, 2) NOT NULL,
+    QuantidadeEmEstoque INT NOT NULL,
+    CategoriaID INT,
+    FOREIGN KEY (CategoriaID) REFERENCES Categorias(CategoriaID)
+);
